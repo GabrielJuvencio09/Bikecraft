@@ -1,0 +1,82 @@
+.contatos_informaçoes_bg{
+    background-color: var(--cor-12);
+    color: var(--cor-0);
+}
+
+.contatos_informaçoes{
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);  
+    justify-items: start;
+}
+
+/* utilitario */
+.contato,.informacoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.contato p,
+.informacoes p{
+    margin-bottom: 1rem;
+}
+
+/* contato */
+.contato div{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.contato ul,
+.informacoes ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--cor-5);
+}
+
+.contato ul li:nth-child(2n+2) {
+    padding-bottom: 1rem; 
+    border-bottom: .1rem solid var(--cor-0);
+}
+
+/* informaçoes */
+
+.informacoes ul{
+    gap: 1rem;
+}
+
+/* footer */
+
+.footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: .5rem 0;
+    color: var(--cor-6);
+    
+}
+
+
+@media (max-width: 800px){
+    .contatos_informaçoes,
+    .footer
+    {
+        padding: 0.5rem 2rem;
+    }
+
+   
+
+}
+
+@media (max-width: 425px){
+    .contatos_informaçoes{
+    display: flex;
+    flex-direction: column;
+    gap:2rem ;
+    justify-items: center;
+    }
+}

@@ -1,0 +1,114 @@
+.depoimento{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.depoimento_texto{
+    padding: 6rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--cor-p1);
+    
+}
+
+.depoimento_texto p{
+    max-width: 25ch;
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    line-height: 48px;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.depoimento_texto p::before{
+    position: absolute;
+    content: '“';
+    font-size: 6rem;
+    color: var(--cor-p2);
+    left: -3.5rem;
+}
+
+.depoimento_texto p::after{
+    position: absolute;
+    content: '”';
+    font-size: 6rem;
+    color: var(--cor-p2);
+    right: 1rem;
+    bottom: -3rem;
+}
+
+.depoimento_texto span{
+    color: var(--cor-p4);
+}
+
+
+@media (max-width: 800px){
+    .depoimento img{
+        display: none;
+        
+    }
+    .depoimento{
+        background-color: var(--cor-p1);
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .depoimento_texto p{
+        
+        font-size: 1.8rem;
+    }
+
+    .depoimento_texto::before{
+        position: absolute;
+        content: 'depoimento';
+        font-size: 2rem;
+        font-style: italic;
+        text-transform: uppercase;
+        font-family: 'Merriweather', serif;
+        top: 3rem;
+        left: 12rem;
+    }
+
+    .depoimento_texto p::after{
+        right: -.1rem;
+        bottom: -3rem;
+    }
+
+}
+
+@media (max-width: 425px){
+
+    .depoimento_texto{
+        padding: 5rem 2rem;
+    }
+
+    .depoimento_texto::before{
+        position: absolute;
+        content: 'depoimento:';
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-style: italic;
+        font-family: 'Merriweather', serif;
+        top: 3rem;
+        left: 4rem;
+    }
+
+    .depoimento_texto p{
+        font-size: 1.2rem;
+    }
+
+    .depoimento_texto p::after{
+       display: none;
+    }
+
+    .depoimento_texto p::before{
+        display: none;
+     }
+
+}

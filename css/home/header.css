@@ -1,0 +1,93 @@
+.cabeçalho{
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-12);
+}
+
+.div-cabeçalho{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content:space-between;
+    text-align: center;
+}
+
+.Menu{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.Menus a {
+    position: relative;
+    display: inline-block;
+    padding: .6rem 0.5rem;
+    color: var(--cor-0);
+    text-decoration: none;
+    overflow: hidden; /* Para ocultar a borda no início */
+  }
+  
+  .Menus a::after {
+    content: "";
+    position: absolute;
+    left: 0; /* Inicie da esquerda */
+    bottom: 0;
+    width: 0%; /* Comece com largura zero */
+    height: 0.15rem; /* Ajuste a altura conforme necessário */
+    background-color: var(--cor-5);
+    transition: width 0.3s ease; /* Transição da largura */
+  }
+  
+  .Menus a:hover::after {
+    width: 100%; /* Aumente a largura para 100% no hover */
+  }
+
+
+
+
+@media (max-width: 800px){
+   
+
+    .Menu{
+        font-size: 0.8rem;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .Menus{
+        border-radius: .5rem;
+        background-color: var(--cor-10);
+        padding: 0.2rem 1rem;
+    }
+
+    .Menus:hover{
+        background-color: var(--cor-8);
+    }
+
+    .Menus a::after{
+        display: none;
+    }
+
+}
+
+@media (max-width: 425px){
+    .div-cabeçalho{
+        justify-content: center;
+    }
+
+    .Menu{
+        font-size: 0.8rem;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .Menus{
+        
+        border-radius: .5rem;
+        background-color: var(--cor-9);
+        padding: 0.1rem .2rem;
+    }
+
+}
+
