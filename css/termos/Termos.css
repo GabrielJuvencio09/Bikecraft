@@ -1,0 +1,34 @@
+
+.termos{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.termo{
+    display: flex;
+    flex-direction: column;
+    max-width: 75ch;
+    gap: 2rem;
+}
+
+.termo:nth-child(odd){
+    padding: 5rem 0rem;
+}
+
+.termo li{
+    color: var(--cor-10);
+}
+
+
+@media (max-width: 800px){
+    .termo{
+        
+        padding: 0 2rem;
+    }
+
+    .termo:nth-child(odd){
+        padding: 5rem 2rem;
+    }
+
+}

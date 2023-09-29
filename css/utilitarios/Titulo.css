@@ -1,0 +1,31 @@
+.titulo-bg{
+    background-color: var(--cor-11);
+    color: var(--cor-0);
+}
+
+.titulo{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.titulo h1{
+    margin-top: 1rem;
+}
+
+.titulo h1 span{
+    color: var(--cor-p1);
+}
+
+.titulo p{
+    color: var(--cor-5);
+}
+
+@media (max-width: 800px){
+    .titulo p{
+        font-size: .8rem;
+    }
+
+
+}
+

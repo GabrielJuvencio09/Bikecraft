@@ -1,0 +1,159 @@
+
+.container {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.bicicleta-bg {
+    color: var(--cor-0);
+    background-color: var(--cor-11);
+    box-shadow: inset 200px 0 var(--cor-0);
+}
+
+.bicicleta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+/* bicicleta imagens */
+
+.bicicletas-img {
+    display: grid;
+}
+
+.bicicletas-img img {
+    object-fit: cover;
+    object-position: right;
+    height: 100%;
+    grid-area: 1/1;
+}
+
+.bicicletas-img span {
+    grid-area: 1/1;
+    place-self: start end;
+    margin-top: 1rem;
+    display: inline-block;
+    color: var(--cor-0);
+    background-color: var(--cor-12);
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-radius: 0.5rem 0 0rem 0.5rem;
+}
+
+/* bicicleta conteudo */
+
+.bicicletas-conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 1rem 5rem 0rem 0rem;
+    gap: 1rem;
+}
+
+.bicicletas-conteudo p,
+.bicicletas-conteudo h2 {
+    grid-column: 1/-1;
+}
+
+.bicicletas-conteudo h2 {
+    position: relative;
+}
+
+.bicicletas-conteudo h2::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 8px;
+    background-color: var(--cor-p1);
+    top: -.5rem;
+}
+
+.bicicletas-conteudo p {
+    word-break: break-all;
+    width: 43ch;
+}
+
+.bicicletas-conteudo li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bicicletas-conteudo li img {
+    padding-right: 1rem;
+}
+
+.bicicletas-conteudo a {
+    font-size: 1rem;
+    place-self: end;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+
+}
+
+.bicicletas-conteudo a::after {
+    display: inline-block;
+    content: '';
+    background: url(../../img/icones/seta.svg);
+    width: 18px;
+    height: 10px;
+    transition: transform 0.2s;
+}
+
+.bicicletas-conteudo a:hover::after {
+    transform: translateX(4px);
+}
+
+
+@media (max-width: 800px) { 
+    .container{
+        padding: 2rem;
+        display: grid;
+        gap: 2rem;
+    }
+
+    .bicicleta {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        border: 0.1rem solid var(--cor-5);
+        border-radius: 0.5rem;
+    }
+    .bicicleta-bg{
+        box-shadow: none;
+    }
+
+    .bicicletas-conteudo{
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .container{
+        padding: 0;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .bicicletas-conteudo{
+        grid-template-columns: 1fr;  
+        justify-items: start; 
+    }
+
+    .bicicletas-conteudo ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        
+        gap: 1rem;
+    }
+
+    .bicicletas-conteudo a{
+        place-self: start;
+    }
+
+}

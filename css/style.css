@@ -9,6 +9,7 @@
 
 /* utilitarios */
 @import  './utilitarios/componentes.css';
+@import  './utilitarios/Titulo.css';
 
 /* Cabeçalho */
 @import './home/header.css';
@@ -22,3 +23,17 @@
 @import './home/seguros.css';
 @import './home/contatos_informaçoes.css';
 
+/* termos */
+
+@import './termos/Termos.css';
+
+/* Bicicletas */
+@import './bicicletas/bicicletas.css';
+
+/* seguros */
+@import './Seguros/seguros.css';
+@import './Seguros/perguntas.css';
+
+/* contatos */
+@import './Contatos/contatos.css';
+@import './Contatos/formulario.css';

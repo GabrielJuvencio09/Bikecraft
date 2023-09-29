@@ -5,6 +5,14 @@
     
 }
 
+.depoimento > div img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position:left;
+
+}
+
 .depoimento_texto{
     padding: 6rem 8rem;
     display: flex;
@@ -45,6 +53,8 @@
 .depoimento_texto span{
     color: var(--cor-p4);
 }
+
+
 
 
 @media (max-width: 800px){

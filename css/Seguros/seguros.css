@@ -1,0 +1,61 @@
+.vantagens-bg{
+    background-color: var(--cor-12);
+    color: var(--cor-0);
+}
+
+.vantagens{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.vantagens h1 span{
+    color: var(--cor-p1);
+}
+.vantagens h1{
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.vantagens ul{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: start;
+   gap: 2rem 3rem;
+}
+
+.vantagens ul li{
+    display: grid;
+    gap: 1rem;
+    
+}
+
+.vantagens ul li p{
+    color:var(--cor-6)
+}
+
+@media (max-width: 800px){
+    .vantagens ul{
+    
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vantagens ul li h3{
+        font-size: 1.5rem;
+    }
+
+    .vantagens ul li p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 425px){
+    .vantagens ul{
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vantagens ul li h3{
+        font-size: 1.2rem;
+    }
+
+}
