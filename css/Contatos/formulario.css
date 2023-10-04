@@ -4,8 +4,77 @@
 
 .Formulario{
     display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 4rem;
     padding-right: 2rem;
     gap: 2rem 1rem;
+    text-align: justify;
+    justify-items: start;
+    border: 0.1rem solid var(--cor-6);
+    border-left: none;
+}
+
+.Formulario ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    
+}
+
+.Formulario ul li{
+    display: flex;
+    flex-direction: column;
+}
+
+.Formulario ul li:nth-child(3){
+    grid-column: 1/-1;
+}
+
+.Formulario ul li:nth-child(4){
+    grid-column: 1/-1;
+}
+
+.Formulario ul li input,
+.Formulario ul li textarea{
+    
+    padding: 0.5REM 1rem;
+    border: 0.1rem solid transparent;
+    background-color: var(--cor-2);
+    border-radius: 0.3rem;
+}
+
+.Formulario ul li input:focus,
+.Formulario ul li textarea:focus{
+    outline: none;
+    border-color: var(--cor-p1);
+    background-color: var(--cor-0);
+    box-shadow: 0 0 0 2px #fea;
+}
+
+.Formulario ul li input{
+    height: 2rem;
+}
+
+@media (max-width: 800px){
+    
+}
+
+@media (max-width: 425px){
+    .Formulario{
+
+        padding:  1rem;
+    }
+
+    .Formulario ul{
+        display: grid;
+        grid-template-columns: 350px;
+    }
+
+    .Formulario ul li input {
+        height: 20px;
+    }
+
+    .Formulario a{
+        font-size: 0.7rem;
+        padding: 1rem;
+    }
 }

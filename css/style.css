@@ -29,6 +29,7 @@
 
 /* Bicicletas */
 @import './bicicletas/bicicletas.css';
+@import './bicicleta/nimbus.css';
 
 /* seguros */
 @import './Seguros/seguros.css';
@@ -37,3 +38,7 @@
 /* contatos */
 @import './Contatos/contatos.css';
 @import './Contatos/formulario.css';
+@import './Contatos/Locais.css';
+
+/* orçamento */
+@import './orcamento/orcamento.css';

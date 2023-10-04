@@ -2,6 +2,7 @@
 
 .loja-online-bg {
     background-color: var(--cor-11);
+    box-shadow: inset  0 -350px white;
 }
 
 .loja-online {
@@ -9,7 +10,8 @@
     margin: 0 auto;
     padding: 4rem 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 28rem 1fr;
+    
 }
 
 .loja-online-informaçoes-bg {
@@ -17,12 +19,17 @@
     background-color: var(--cor-12);
     padding: 4rem;
     padding-right: 0;
+    border: 0.1rem solid var(--cor-6);
+    border-right: none;
+    
 }
 
 .loja-online-informaçoes {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    
+    
 }
 
 .loja-online-informaçoes p {
@@ -53,4 +60,18 @@
     display: flex;
     gap: 2rem;
 
+}
+
+@media (max-width: 800px){
+    .loja-online{
+    grid-template-columns:1fr;
+    
+    }
+}
+
+@media (max-width: 425px){
+
+    .loja-online-informaçoes{
+        gap: 1rem;
+    }
 }

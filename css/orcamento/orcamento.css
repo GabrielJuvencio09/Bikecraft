@@ -1,0 +1,250 @@
+.orcamento-bg {
+    background-color: var(--cor-11);
+    box-shadow: inset 0 -500px white;
+    color: var(--cor-0);
+}
+
+.orcamento {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+
+.orcamento h2 {
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.orcamento h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    background-color: var(--cor-p1);
+    position: absolute;
+    left: -12px;
+
+}
+
+.orcamento-dados,
+.orcamento-produto {
+    padding: 60px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* produtos */
+
+
+.orcamento-produto {
+    border-radius: 5px 0 0 5px;
+    background-color: var(--cor-12);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    align-content: center;
+    gap: 20px;
+   
+}
+
+.orcamento-produto label {
+    color: var(--cor-4);
+    background-color: var(--cor-10);
+    padding: 0.8rem 1rem;
+    border-radius: 0.2rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    
+}
+.orcamento-produto label:focus{
+        box-shadow: 0 0 0 2px var(--cor-10);
+    }
+
+.orcamento-produto input:checked+label::before {
+    border: 1px solid var(--cor-7);
+    box-shadow: inset 0 0 0 3px var(--cor-0), inset 0 0 0 5px var(--cor-7);
+
+}
+
+.orcamento-produto label::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--cor-6);
+    border-radius: 50%;
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+
+.orcamento-produto>* {
+    grid-column: 1/-1;
+}
+
+.orcamento-produto>label {
+    grid-column: initial;
+}
+
+.orcamento-produto label span{
+    display: none;
+}
+
+.orcamento-produto label:hover{
+    background-color: var(--cor-9);
+    border-color: var(--cor-9);
+}
+
+.orcamento-produto label:focus{
+    box-shadow: 0 0 0 2px var(--cor-p1);
+}
+.orcamento-produto input:focus + label{
+    box-shadow: 0 0 0 2px var(--cor-p1);
+    border: 1px solid var(--cor-12);
+}
+
+.orcamento-produto input:checked + label span{
+    display: inline-block;
+}
+
+.orcamento-produto input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.orcamento-produto input:checked+label {
+    background-color: var(--cor-0);
+    color: var(--cor-11);
+}
+
+.orcamento-conteudo{
+    display: none;
+}
+
+
+.orcamento-conteudo h2,
+.orcamento-dados h2:nth-last-of-type(n + 2) {
+    margin-top: 20px;
+}
+
+#Bikecraft:checked ~ #orcamento-bikecraft,
+#seguro:checked~ #orcamento-seguro{
+    display: grid;
+    gap: 20px;
+}
+
+/* bicicletas */
+
+.orcamento-detalhes{
+    display: none;
+    background-color: var(--cor-0);
+    color: var(--cor-12);
+    padding: 20px;
+    grid-template-columns: 1fr 1fr ;
+    border-radius: 4px;
+    align-items: center;
+}
+
+
+
+.orcamento-detalhes li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.orcamento-detalhes li img{
+    width: 16px ;
+    margin-right: 8px;
+}
+
+.orcamento-produto input:checked + label + .orcamento-detalhes{
+    display: grid;
+}
+
+
+/* dados */
+.orcamento-dados {
+    border-radius: 0 5px 5px 0;
+    background-color: var(--cor-0);
+    color: var(--cor-12);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 4rem;
+}
+
+.orcamento-dados h2 {
+    grid-column: 1/-1;
+}
+
+.orcamento-dados div {
+    display: flex;
+    flex-direction: column;
+}
+
+.orcamento-dados div:nth-child(4),
+.orcamento-dados div:nth-child(5) {
+    grid-column: 1/-1;
+
+}
+
+.bnt-1 {
+    grid-column: 1/-1;
+}
+
+.orcamento-dados input {
+    padding: 0.5REM 1rem;
+    border: 0.1rem solid transparent;
+    background-color: var(--cor-2);
+    border-radius: 0.3rem;
+    height: 1.5rem;
+}
+
+.orcamento-dados input:focus {
+    outline: none;
+    border-color: var(--cor-p1);
+    background-color: var(--cor-0);
+    box-shadow: 0 0 0 2px #fea;
+}
+
+@media (max-width: 800px){
+    .orcamento-bg{
+        box-shadow: none;
+    }
+
+    .orcamento{
+        grid-template-columns: 1fr;
+    }
+
+    .orcamento-produto{
+        border-radius: 5px 5px 0 0;
+    }
+
+    .orcamento-dados{
+        border-radius: 0 0 5px 5px ; 
+    }
+
+}
+
+@media (max-width: 425px){
+    
+    .orcamento-produto,
+    .orcamento-dados{
+        grid-template-columns: 1fr;
+    }
+
+    .bnt-1{
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+
+}
