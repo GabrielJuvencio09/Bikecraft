@@ -39,9 +39,11 @@
     transition: width 0.3s ease; /* Transição da largura */
   }
   
-  .Menus a:hover::after {
+  .Menus a:hover::after,.Menus a.ativo::after {
     width: 100%; /* Aumente a largura para 100% no hover */
   }
+
+  
 
 
 
